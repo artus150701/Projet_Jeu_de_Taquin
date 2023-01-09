@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int haut(int **T, int N, int x, int y){
+  int change = T[x - 1][y];
+  int tmp = N*N;
+  T[x - 1][y] = tmp;
+  T[x][y] = change;
+  return x - 1;
+}
+
+int bas(int **T, int N, int x, int y){
+  int change = T[x + 1][y];
+  int tmp = N*N;
+  T[x + 1][y] = tmp;
+  T[x][y] = change;
+  return x + 1;
+}
+
+int gauche(int **T, int N, int x, int y){
+  int change = T[x][y - 1];
+  int tmp = N*N;
+  T[x][y - 1] = tmp;
+  T[x][y] = change;
+  return y - 1;
+}
+
+int droite(int **T, int N, int x, int y){
+  int change = T[x][y + 1];
+  int tmp = N*N;
+  T[x][y + 1] = tmp;
+  T[x][y] = change;
+  return y + 1;
+}

@@ -1,0 +1,2 @@
+void aide(int **resolu, int **T,int N, int x, int y, char *mouv, char prec);
+void jeu(int **resolu, int ** T, int N); 

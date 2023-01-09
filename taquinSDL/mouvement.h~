@@ -1,0 +1,1 @@
+int haut(int **T, int N, int x, int y);
